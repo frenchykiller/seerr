@@ -1134,10 +1134,11 @@ authRoutes.get('/oidc/callback', async (req, res, next) => {
     );
     
     let claims = tokenSet.claims();
-    
-    if (!claims.email) {
+
+    // Authelia (and others) only expose some claims, e.g. groups, via userinfo
+    if (tokenSet.access_token) {
       try {
-        const userinfo = await client.userinfo(tokenSet.access_token!);
+        const userinfo = await client.userinfo(tokenSet.access_token);
         claims = { ...claims, ...userinfo };
       } catch (e: any) {
         logger.warn('Failed to fetch userinfo', { error: e.message });

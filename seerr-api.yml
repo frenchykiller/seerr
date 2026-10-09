@@ -8406,6 +8406,47 @@ paths:
         '500':
           description: Internal server error
       security: []
+      parameters:
+        - in: query
+          name: code
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: state
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: iss
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: scope
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: session_state
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: error
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: error_description
+          required: false
+          schema:
+            type: string
+        - in: query
+          name: error_uri
+          required: false
+          schema:
+            type: string
 security:
   - cookieAuth: []
   - apiKey: []
