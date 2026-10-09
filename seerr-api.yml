@@ -1,7 +1,7 @@
-openapi: '3.0.2'
+openapi: 3.0.2
 info:
-  title: 'Seerr API'
-  version: '1.0.0'
+  title: Seerr API
+  version: 1.0.0
   description: |
     This is the documentation for the Seerr API backend.
 
@@ -45,7 +45,6 @@ servers:
     variables:
       server:
         default: http://localhost:5055
-
 components:
   schemas:
     Blocklist:
@@ -98,7 +97,7 @@ components:
           readOnly: true
         email:
           type: string
-          example: 'hey@itsme.com'
+          example: hey@itsme.com
           readOnly: true
         username:
           type: string
@@ -144,75 +143,75 @@ components:
         username:
           type: string
           nullable: true
-          example: 'Mr User'
+          example: Mr User
         email:
           type: string
-          example: 'user@example.com'
+          example: user@example.com
         locale:
           type: string
           nullable: true
-          example: 'en'
+          example: en
         discoverRegion:
           type: string
           nullable: true
-          example: 'US'
+          example: US
         streamingRegion:
           type: string
           nullable: true
-          example: 'US'
+          example: US
         originalLanguage:
           type: string
           nullable: true
-          example: 'en'
+          example: en
         movieQuotaLimit:
           type: number
           nullable: true
-          description: 'Maximum number of movie requests allowed'
+          description: Maximum number of movie requests allowed
           example: 10
         movieQuotaDays:
           type: number
           nullable: true
-          description: 'Time period in days for movie quota'
+          description: Time period in days for movie quota
           example: 30
         tvQuotaLimit:
           type: number
           nullable: true
-          description: 'Maximum number of TV requests allowed'
+          description: Maximum number of TV requests allowed
           example: 5
         tvQuotaDays:
           type: number
           nullable: true
-          description: 'Time period in days for TV quota'
+          description: Time period in days for TV quota
           example: 14
         globalMovieQuotaDays:
           type: number
           nullable: true
-          description: 'Global movie quota days setting'
+          description: Global movie quota days setting
           example: 30
         globalMovieQuotaLimit:
           type: number
           nullable: true
-          description: 'Global movie quota limit setting'
+          description: Global movie quota limit setting
           example: 10
         globalTvQuotaLimit:
           type: number
           nullable: true
-          description: 'Global TV quota limit setting'
+          description: Global TV quota limit setting
           example: 5
         globalTvQuotaDays:
           type: number
           nullable: true
-          description: 'Global TV quota days setting'
+          description: Global TV quota days setting
           example: 14
         watchlistSyncMovies:
           type: boolean
           nullable: true
-          description: 'Enable watchlist sync for movies'
+          description: Enable watchlist sync for movies
           example: true
         watchlistSyncTv:
           type: boolean
           nullable: true
-          description: 'Enable watchlist sync for TV'
+          description: Enable watchlist sync for TV
           example: false
     MainSettings:
       type: object
@@ -327,7 +326,7 @@ components:
       properties:
         name:
           type: string
-          example: 'Main Server'
+          example: Main Server
           readOnly: true
         machineId:
           type: string
@@ -335,7 +334,7 @@ components:
           readOnly: true
         ip:
           type: string
-          example: '127.0.0.1'
+          example: 127.0.0.1
         port:
           type: number
           example: 32400
@@ -350,7 +349,7 @@ components:
         webAppUrl:
           type: string
           nullable: true
-          example: 'https://app.plex.tv/desktop'
+          example: https://app.plex.tv/desktop
       required:
         - name
         - machineId
@@ -361,16 +360,16 @@ components:
       properties:
         protocol:
           type: string
-          example: 'https'
+          example: https
         address:
           type: string
-          example: '127.0.0.1'
+          example: 127.0.0.1
         port:
           type: number
           example: 32400
         uri:
           type: string
-          example: 'https://127-0-0-1.2ab6ce1a093d465e910def96cf4e4799.plex.direct:32400'
+          example: https://127-0-0-1.2ab6ce1a093d465e910def96cf4e4799.plex.direct:32400
         local:
           type: boolean
           example: true
@@ -379,7 +378,7 @@ components:
           example: 200
         message:
           type: string
-          example: 'OK'
+          example: OK
       required:
         - protocol
         - address
@@ -391,25 +390,25 @@ components:
       properties:
         name:
           type: string
-          example: 'My Plex Server'
+          example: My Plex Server
         product:
           type: string
-          example: 'Plex Media Server'
+          example: Plex Media Server
         productVersion:
           type: string
           example: '1.21'
         platform:
           type: string
-          example: 'Linux'
+          example: Linux
         platformVersion:
           type: string
-          example: 'default/linux/amd64/17.1/systemd'
+          example: default/linux/amd64/17.1/systemd
         device:
           type: string
-          example: 'PC'
+          example: PC
         clientIdentifier:
           type: string
-          example: '85a943ce-a0cc-4d2a-a4ec-f74f06e40feb'
+          example: 85a943ce-a0cc-4d2a-a4ec-f74f06e40feb
         createdAt:
           type: string
           example: '2021-01-01T00:00:00.000Z'
@@ -420,7 +419,7 @@ components:
           type: array
           items:
             type: string
-            example: 'server'
+            example: server
         owned:
           type: boolean
           example: true
@@ -432,13 +431,13 @@ components:
           example: true
         sourceTitle:
           type: string
-          example: 'xyzabc'
+          example: xyzabc
         accessToken:
           type: string
-          example: 'supersecretaccesstoken'
+          example: supersecretaccesstoken
         publicAddress:
           type: string
-          example: '127.0.0.1'
+          example: 127.0.0.1
         httpsRequired:
           type: boolean
           example: true
@@ -496,23 +495,23 @@ components:
       properties:
         name:
           type: string
-          example: 'Main Server'
+          example: Main Server
           readOnly: true
         hostname:
           type: string
-          example: 'http://my.jellyfin.host'
+          example: http://my.jellyfin.host
         externalHostname:
           type: string
-          example: 'http://my.jellyfin.host'
+          example: http://my.jellyfin.host
         jellyfinForgotPasswordUrl:
           type: string
-          example: 'http://my.jellyfin.host/web/index.html#!/forgotpassword.html'
+          example: http://my.jellyfin.host/web/index.html#!/forgotpassword.html
         adminUser:
           type: string
-          example: 'admin'
+          example: admin
         adminPass:
           type: string
-          example: 'mypassword'
+          example: mypassword
         libraries:
           type: array
           readOnly: true
@@ -529,19 +528,23 @@ components:
           properties:
             tv:
               type: string
-              enum: [tvdb, tmdb]
-              example: 'tvdb'
+              enum:
+                - tvdb
+                - tmdb
+              example: tvdb
             anime:
               type: string
-              enum: [tvdb, tmdb]
-              example: 'tvdb'
+              enum:
+                - tvdb
+                - tmdb
+              example: tvdb
     TautulliSettings:
       type: object
       properties:
         hostname:
           type: string
           nullable: true
-          example: 'tautulli.example.com'
+          example: tautulli.example.com
         port:
           type: number
           nullable: true
@@ -564,16 +567,16 @@ components:
           readOnly: true
         name:
           type: string
-          example: 'Radarr Main'
+          example: Radarr Main
         hostname:
           type: string
-          example: '127.0.0.1'
+          example: 127.0.0.1
         port:
           type: number
           example: 7878
         apiKey:
           type: string
-          example: 'exampleapikey'
+          example: exampleapikey
         useSsl:
           type: boolean
           example: false
@@ -587,13 +590,13 @@ components:
           example: 720p/1080p
         activeDirectory:
           type: string
-          example: '/movies'
+          example: /movies
         is4k:
           type: boolean
           example: false
         minimumAvailability:
           type: string
-          example: 'In Cinema'
+          example: In Cinema
         isDefault:
           type: boolean
           example: false
@@ -627,16 +630,16 @@ components:
           readOnly: true
         name:
           type: string
-          example: 'Sonarr Main'
+          example: Sonarr Main
         hostname:
           type: string
-          example: '127.0.0.1'
+          example: 127.0.0.1
         port:
           type: number
           example: 8989
         apiKey:
           type: string
-          example: 'exampleapikey'
+          example: exampleapikey
         useSsl:
           type: boolean
           example: false
@@ -650,7 +653,7 @@ components:
           example: 720p/1080p
         activeDirectory:
           type: string
-          example: '/tv/'
+          example: /tv/
         activeLanguageProfileId:
           type: number
           example: 1
@@ -749,10 +752,10 @@ components:
             type: number
         overview:
           type: string
-          example: 'Overview of the movie'
+          example: Overview of the movie
         originalLanguage:
           type: string
-          example: 'en'
+          example: en
         title:
           type: string
           example: Movie Title
@@ -794,10 +797,10 @@ components:
             type: number
         overview:
           type: string
-          example: 'Overview of the movie'
+          example: Overview of the movie
         originalLanguage:
           type: string
-          example: 'en'
+          example: en
         name:
           type: string
           example: TV Show Name
@@ -825,7 +828,7 @@ components:
           example: false
         mediaType:
           type: string
-          default: 'person'
+          default: person
         knownFor:
           type: array
           items:
@@ -907,7 +910,7 @@ components:
         site:
           type: string
           enum:
-            - 'YouTube'
+            - YouTube
     MovieDetails:
       type: object
       properties:
@@ -917,7 +920,7 @@ components:
           readOnly: true
         imdbId:
           type: string
-          example: 'tt123'
+          example: tt123
         adult:
           type: boolean
         backdropPath:
@@ -970,7 +973,7 @@ components:
                 properties:
                   iso_3166_1:
                     type: string
-                    example: 'US'
+                    example: US
                   rating:
                     type: string
                     nullable: true
@@ -981,14 +984,14 @@ components:
                       properties:
                         certification:
                           type: string
-                          example: 'PG-13'
+                          example: PG-13
                         iso_639_1:
                           type: string
                           nullable: true
                         note:
                           type: string
                           nullable: true
-                          example: 'Blu ray'
+                          example: Blu ray
                         release_date:
                           type: string
                           example: '2017-07-12T00:00:00.000Z'
@@ -1117,10 +1120,10 @@ components:
                 properties:
                   iso_3166_1:
                     type: string
-                    example: 'US'
+                    example: US
                   rating:
                     type: string
-                    example: 'TV-14'
+                    example: TV-14
         createdBy:
           type: array
           items:
@@ -1623,10 +1626,15 @@ components:
           example: job-name
         type:
           type: string
-          enum: [process, command]
+          enum:
+            - process
+            - command
         interval:
           type: string
-          enum: [short, long, fixed]
+          enum:
+            - short
+            - long
+            - fixed
         name:
           type: string
           example: A Job Name
@@ -1786,20 +1794,20 @@ components:
           example: 1
         name:
           type: string
-          example: 'anime'
+          example: anime
     SpokenLanguage:
       type: object
       properties:
         englishName:
           type: string
-          example: 'English'
+          example: English
           nullable: true
         iso_639_1:
           type: string
-          example: 'en'
+          example: en
         name:
           type: string
-          example: 'English'
+          example: English
     Collection:
       type: object
       properties:
@@ -1843,7 +1851,7 @@ components:
           example: CBS
         airTime:
           type: string
-          example: 02:15
+          example: '02:15'
         images:
           type: array
           items:
@@ -2115,10 +2123,10 @@ components:
       properties:
         certification:
           type: string
-          example: 'PG-13'
+          example: PG-13
         meaning:
           type: string
-          example: 'Some material may be inappropriate for children under 13.'
+          example: Some material may be inappropriate for children under 13.
           nullable: true
         order:
           type: number
@@ -2126,7 +2134,6 @@ components:
           nullable: true
       required:
         - certification
-
     CertificationResponse:
       type: object
       properties:
@@ -2139,11 +2146,11 @@ components:
       example:
         certifications:
           US:
-            - certification: 'G'
-              meaning: 'All ages admitted'
+            - certification: G
+              meaning: All ages admitted
               order: 1
-            - certification: 'PG'
-              meaning: 'Some material may not be suitable for children under 10.'
+            - certification: PG
+              meaning: Some material may not be suitable for children under 10.
               order: 2
   securitySchemes:
     cookieAuth:
@@ -2154,7 +2161,6 @@ components:
       type: apiKey
       in: header
       name: X-Api-Key
-
 paths:
   /status:
     get:
@@ -2240,7 +2246,7 @@ paths:
               $ref: '#/components/schemas/MainSettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -2271,7 +2277,7 @@ paths:
               $ref: '#/components/schemas/NetworkSettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -2315,7 +2321,7 @@ paths:
               $ref: '#/components/schemas/JellyfinSettings'
       responses:
         '200':
-          description: 'Values were successfully updated'
+          description: Values were successfully updated
           content:
             application/json:
               schema:
@@ -2328,7 +2334,7 @@ paths:
         - settings
       responses:
         '200':
-          description: 'Jellyfin libraries returned'
+          description: Jellyfin libraries returned
           content:
             application/json:
               schema:
@@ -2361,15 +2367,15 @@ paths:
                   example: true
       responses:
         '200':
-          description: 'Jellyfin library returned'
+          description: Jellyfin library returned
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/JellyfinLibrary'
         '400':
-          description: 'Invalid request body'
+          description: Invalid request body
         '404':
-          description: 'Library does not exist'
+          description: Library does not exist
   /settings/jellyfin/library/sync:
     post:
       summary: Sync Jellyfin libraries
@@ -2378,7 +2384,7 @@ paths:
         - settings
       responses:
         '200':
-          description: 'Jellyfin libraries returned'
+          description: Jellyfin libraries returned
           content:
             application/json:
               schema:
@@ -2386,9 +2392,9 @@ paths:
                 items:
                   $ref: '#/components/schemas/JellyfinLibrary'
         '404':
-          description: 'No libraries found'
+          description: No libraries found
         '501':
-          description: 'Automatic library grouping is not supported'
+          description: Automatic library grouping is not supported
   /settings/jellyfin/users:
     get:
       summary: Get Jellyfin Users
@@ -2509,7 +2515,7 @@ paths:
               $ref: '#/components/schemas/PlexSettings'
       responses:
         '200':
-          description: 'Values were successfully updated'
+          description: Values were successfully updated
           content:
             application/json:
               schema:
@@ -2522,7 +2528,7 @@ paths:
         - settings
       responses:
         '200':
-          description: 'Plex libraries returned'
+          description: Plex libraries returned
           content:
             application/json:
               schema:
@@ -2555,15 +2561,15 @@ paths:
                   example: true
       responses:
         '200':
-          description: 'Plex library returned'
+          description: Plex library returned
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/PlexLibrary'
         '400':
-          description: 'Invalid request body'
+          description: Invalid request body
         '404':
-          description: 'Library does not exist'
+          description: Library does not exist
   /settings/plex/library/sync:
     post:
       summary: Sync Plex libraries
@@ -2572,7 +2578,7 @@ paths:
         - settings
       responses:
         '200':
-          description: 'Plex libraries returned'
+          description: Plex libraries returned
           content:
             application/json:
               schema:
@@ -2719,7 +2725,7 @@ paths:
               $ref: '#/components/schemas/MetadataSettings'
       responses:
         '200':
-          description: 'Values were successfully updated'
+          description: Values were successfully updated
           content:
             application/json:
               schema:
@@ -2753,7 +2759,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'Successfully connected to TVDB'
+                    example: Successfully connected to TVDB
   /settings/tautulli:
     get:
       summary: Get Tautulli settings
@@ -2780,7 +2786,7 @@ paths:
               $ref: '#/components/schemas/TautulliSettings'
       responses:
         '200':
-          description: 'Values were successfully updated'
+          description: Values were successfully updated
           content:
             application/json:
               schema:
@@ -2793,7 +2799,7 @@ paths:
         - settings
       responses:
         '200':
-          description: 'Values were returned'
+          description: Values were returned
           content:
             application/json:
               schema:
@@ -2813,7 +2819,7 @@ paths:
               $ref: '#/components/schemas/RadarrSettings'
       responses:
         '201':
-          description: 'New Radarr instance created'
+          description: New Radarr instance created
           content:
             application/json:
               schema:
@@ -2833,7 +2839,7 @@ paths:
               properties:
                 hostname:
                   type: string
-                  example: '127.0.0.1'
+                  example: 127.0.0.1
                 port:
                   type: number
                   example: 7878
@@ -2883,7 +2889,7 @@ paths:
               $ref: '#/components/schemas/RadarrSettings'
       responses:
         '200':
-          description: 'Radarr instance updated'
+          description: Radarr instance updated
           content:
             application/json:
               schema:
@@ -2902,7 +2908,7 @@ paths:
           description: Radarr instance ID
       responses:
         '200':
-          description: 'Radarr instance updated'
+          description: Radarr instance updated
           content:
             application/json:
               schema:
@@ -2937,7 +2943,7 @@ paths:
         - settings
       responses:
         '200':
-          description: 'Values were returned'
+          description: Values were returned
           content:
             application/json:
               schema:
@@ -2957,7 +2963,7 @@ paths:
               $ref: '#/components/schemas/SonarrSettings'
       responses:
         '201':
-          description: 'New Sonarr instance created'
+          description: New Sonarr instance created
           content:
             application/json:
               schema:
@@ -2977,7 +2983,7 @@ paths:
               properties:
                 hostname:
                   type: string
-                  example: '127.0.0.1'
+                  example: 127.0.0.1
                 port:
                   type: number
                   example: 8989
@@ -3027,7 +3033,7 @@ paths:
               $ref: '#/components/schemas/SonarrSettings'
       responses:
         '200':
-          description: 'Sonarr instance updated'
+          description: Sonarr instance updated
           content:
             application/json:
               schema:
@@ -3046,7 +3052,7 @@ paths:
           description: Sonarr instance ID
       responses:
         '200':
-          description: 'Sonarr instance updated'
+          description: Sonarr instance updated
           content:
             application/json:
               schema:
@@ -3152,7 +3158,7 @@ paths:
               properties:
                 schedule:
                   type: string
-                  example: '0 */5 * * * *'
+                  example: 0 */5 * * * *
       responses:
         '200':
           description: Rescheduled job
@@ -3295,7 +3301,7 @@ paths:
             type: string
       responses:
         '204':
-          description: 'Flushed cache'
+          description: Flushed cache
   /settings/cache/dns/{dnsEntry}/flush:
     post:
       summary: Flush a specific DNS cache entry
@@ -3310,7 +3316,7 @@ paths:
             type: string
       responses:
         '204':
-          description: 'Flushed dns cache'
+          description: Flushed dns cache
   /settings/logs:
     get:
       summary: Returns logs
@@ -3335,7 +3341,11 @@ paths:
           schema:
             type: string
             nullable: true
-            enum: [debug, info, warn, error]
+            enum:
+              - debug
+              - info
+              - warn
+              - error
             default: debug
         - in: query
           name: search
@@ -3391,7 +3401,7 @@ paths:
               $ref: '#/components/schemas/NotificationEmailSettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -3437,7 +3447,7 @@ paths:
               $ref: '#/components/schemas/DiscordSettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -3483,7 +3493,7 @@ paths:
               $ref: '#/components/schemas/PushbulletSettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -3529,7 +3539,7 @@ paths:
               $ref: '#/components/schemas/PushoverSettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -3602,7 +3612,7 @@ paths:
               $ref: '#/components/schemas/GotifySettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -3648,7 +3658,7 @@ paths:
               $ref: '#/components/schemas/NtfySettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -3694,7 +3704,7 @@ paths:
               $ref: '#/components/schemas/SlackSettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -3740,7 +3750,7 @@ paths:
               $ref: '#/components/schemas/TelegramSettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -3786,7 +3796,7 @@ paths:
               $ref: '#/components/schemas/WebPushSettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -3832,7 +3842,7 @@ paths:
               $ref: '#/components/schemas/WebhookSettings'
       responses:
         '200':
-          description: 'Values were sucessfully updated'
+          description: Values were sucessfully updated
           content:
             application/json:
               schema:
@@ -3914,7 +3924,7 @@ paths:
               properties:
                 title:
                   type: string
-                  example: 'Slider Title'
+                  example: Slider Title
                 type:
                   type: number
                   example: 1
@@ -3962,7 +3972,7 @@ paths:
               properties:
                 title:
                   type: string
-                  example: 'New Slider'
+                  example: New Slider
                 type:
                   type: number
                   example: 1
@@ -4001,7 +4011,7 @@ paths:
                 properties:
                   version:
                     type: string
-                    example: '1.0.0'
+                    example: 1.0.0
                   totalRequests:
                     type: number
                     example: 100
@@ -4108,7 +4118,7 @@ paths:
                     example: '123456'
                   secret:
                     type: string
-                    example: 'abc123def456'
+                    example: abc123def456
         '500':
           description: Failed to initiate Quick Connect
   /auth/jellyfin/quickconnect/check:
@@ -4211,7 +4221,7 @@ paths:
                 properties:
                   status:
                     type: string
-                    example: 'ok'
+                    example: ok
   /auth/reset-password:
     post:
       summary: Send a reset password email
@@ -4229,7 +4239,7 @@ paths:
                 properties:
                   status:
                     type: string
-                    example: 'ok'
+                    example: ok
       requestBody:
         required: true
         content:
@@ -4254,7 +4264,7 @@ paths:
           required: true
           schema:
             type: string
-            example: '9afef5a7-ec89-4d5f-9397-261e96970b50'
+            example: 9afef5a7-ec89-4d5f-9397-261e96970b50
       responses:
         '200':
           description: OK
@@ -4265,7 +4275,7 @@ paths:
                 properties:
                   status:
                     type: string
-                    example: 'ok'
+                    example: ok
       requestBody:
         required: true
         content:
@@ -4300,7 +4310,13 @@ paths:
           name: sort
           schema:
             type: string
-            enum: [created, updated, requests, displayname, usertype, role]
+            enum:
+              - created
+              - updated
+              - requests
+              - displayname
+              - usertype
+              - role
             default: created
         - in: query
           name: sortDirection
@@ -4309,7 +4325,9 @@ paths:
             field (e.g. displayname defaults to asc, requests/updated to desc).
           schema:
             type: string
-            enum: [asc, desc]
+            enum:
+              - asc
+              - desc
         - in: query
           name: q
           required: false
@@ -4349,7 +4367,7 @@ paths:
               properties:
                 email:
                   type: string
-                  example: 'hey@itsme.com'
+                  example: hey@itsme.com
                 username:
                   type: string
                 permissions:
@@ -4772,7 +4790,10 @@ paths:
           name: filter
           schema:
             type: string
-            enum: [all, manual, blocklistedTags]
+            enum:
+              - all
+              - manual
+              - blocklistedTags
             default: manual
       responses:
         '200':
@@ -4899,7 +4920,10 @@ paths:
           name: filter
           schema:
             type: string
-            enum: [all, manual, blocklistedTags]
+            enum:
+              - all
+              - manual
+              - blocklistedTags
             default: manual
       responses:
         '200':
@@ -5301,10 +5325,10 @@ paths:
               properties:
                 username:
                   type: string
-                  example: 'Mr User'
+                  example: Mr User
                 password:
                   type: string
-                  example: 'supersecret'
+                  example: supersecret
       responses:
         '204':
           description: Linking account succeeded
@@ -5354,10 +5378,10 @@ paths:
               required:
                 - secret
       responses:
-        '400':
-          description: Invalid Quick Connect secret
         '204':
           description: Account successfully linked
+        '400':
+          description: Invalid Quick Connect secret
         '401':
           description: Unauthorized
         '422':
@@ -5504,7 +5528,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 'Mulan'
+            example: Mulan
         - in: query
           name: page
           schema:
@@ -5552,7 +5576,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 'christmas'
+            example: christmas
         - in: query
           name: page
           schema:
@@ -5592,7 +5616,7 @@ paths:
           required: true
           schema:
             type: string
-            example: 'Disney'
+            example: Disney
         - in: query
           name: page
           schema:
@@ -5668,12 +5692,12 @@ paths:
           name: primaryReleaseDateGte
           schema:
             type: string
-            example: 2022-01-01
+            example: 2022-01-01T00:00:00.000Z
         - in: query
           name: primaryReleaseDateLte
           schema:
             type: string
-            example: 2023-01-01
+            example: 2023-01-01T00:00:00.000Z
         - in: query
           name: withRuntimeGte
           schema:
@@ -5742,7 +5766,9 @@ paths:
           name: certificationMode
           schema:
             type: string
-            enum: [exact, range]
+            enum:
+              - exact
+              - range
             example: exact
           description: Determines whether to use exact certification matching or a certification range (internal use only, not sent to TMDB API)
       responses:
@@ -5994,12 +6020,12 @@ paths:
           name: firstAirDateGte
           schema:
             type: string
-            example: 2022-01-01
+            example: 2022-01-01T00:00:00.000Z
         - in: query
           name: firstAirDateLte
           schema:
             type: string
-            example: 2023-01-01
+            example: 2023-01-01T00:00:00.000Z
         - in: query
           name: withRuntimeGte
           schema:
@@ -6073,7 +6099,9 @@ paths:
           name: certificationMode
           schema:
             type: string
-            enum: [exact, range]
+            enum:
+              - exact
+              - range
             example: exact
           description: Determines whether to use exact certification matching or a certification range (internal use only, not sent to TMDB API)
       responses:
@@ -6513,28 +6541,30 @@ paths:
             type: string
             nullable: true
             enum:
-              [
-                all,
-                approved,
-                available,
-                pending,
-                processing,
-                unavailable,
-                failed,
-                deleted,
-                completed,
-              ]
+              - all
+              - approved
+              - available
+              - pending
+              - processing
+              - unavailable
+              - failed
+              - deleted
+              - completed
         - in: query
           name: sort
           schema:
             type: string
-            enum: [added, modified]
+            enum:
+              - added
+              - modified
             default: added
         - in: query
           name: sortDirection
           schema:
             type: string
-            enum: [asc, desc]
+            enum:
+              - asc
+              - desc
             nullable: true
             default: desc
         - in: query
@@ -6547,7 +6577,10 @@ paths:
           name: mediaType
           schema:
             type: string
-            enum: [movie, tv, all]
+            enum:
+              - movie
+              - tv
+              - all
             nullable: true
             default: all
       responses:
@@ -6581,7 +6614,9 @@ paths:
               properties:
                 mediaType:
                   type: string
-                  enum: [movie, tv]
+                  enum:
+                    - movie
+                    - tv
                   example: movie
                 mediaId:
                   type: number
@@ -6596,7 +6631,8 @@ paths:
                         type: number
                         minimum: 0
                     - type: string
-                      enum: [all]
+                      enum:
+                        - all
                 is4k:
                   type: boolean
                   example: false
@@ -6701,7 +6737,9 @@ paths:
               properties:
                 mediaType:
                   type: string
-                  enum: [movie, tv]
+                  enum:
+                    - movie
+                    - tv
                 seasons:
                   type: array
                   items:
@@ -6797,7 +6835,9 @@ paths:
           required: true
           schema:
             type: string
-            enum: [approve, decline]
+            enum:
+              - approve
+              - decline
       responses:
         '200':
           description: Request status changed
@@ -6953,19 +6993,24 @@ paths:
                     example: 2020
                   url:
                     type: string
-                    example: 'http://www.rottentomatoes.com/m/mulan_2020/'
+                    example: http://www.rottentomatoes.com/m/mulan_2020/
                   criticsScore:
                     type: number
                     example: 85
                   criticsRating:
                     type: string
-                    enum: ['Rotten', 'Fresh', 'Certified Fresh']
+                    enum:
+                      - Rotten
+                      - Fresh
+                      - Certified Fresh
                   audienceScore:
                     type: number
                     example: 65
                   audienceRating:
                     type: string
-                    enum: ['Spilled', 'Upright']
+                    enum:
+                      - Spilled
+                      - Upright
   /movie/{movieId}/ratingscombined:
     get:
       summary: Get RT and IMDB movie ratings combined
@@ -6998,19 +7043,24 @@ paths:
                         example: 2020
                       url:
                         type: string
-                        example: 'http://www.rottentomatoes.com/m/mulan_2020/'
+                        example: http://www.rottentomatoes.com/m/mulan_2020/
                       criticsScore:
                         type: number
                         example: 85
                       criticsRating:
                         type: string
-                        enum: ['Rotten', 'Fresh', 'Certified Fresh']
+                        enum:
+                          - Rotten
+                          - Fresh
+                          - Certified Fresh
                       audienceScore:
                         type: number
                         example: 65
                       audienceRating:
                         type: string
-                        enum: ['Spilled', 'Upright']
+                        enum:
+                          - Spilled
+                          - Upright
                   imdb:
                     type: object
                     properties:
@@ -7019,7 +7069,7 @@ paths:
                         example: I am Legend
                       url:
                         type: string
-                        example: 'https://www.imdb.com/title/tt0480249'
+                        example: https://www.imdb.com/title/tt0480249
                       criticsScore:
                         type: number
                         example: 6.5
@@ -7198,13 +7248,15 @@ paths:
                     example: 2019
                   url:
                     type: string
-                    example: 'http://www.rottentomatoes.com/m/mulan_2020/'
+                    example: http://www.rottentomatoes.com/m/mulan_2020/
                   criticsScore:
                     type: number
                     example: 85
                   criticsRating:
                     type: string
-                    enum: ['Rotten', 'Fresh']
+                    enum:
+                      - Rotten
+                      - Fresh
   /person/{personId}:
     get:
       summary: Get person details
@@ -7291,20 +7343,21 @@ paths:
             type: string
             nullable: true
             enum:
-              [
-                all,
-                available,
-                partial,
-                allavailable,
-                processing,
-                pending,
-                deleted,
-              ]
+              - all
+              - available
+              - partial
+              - allavailable
+              - processing
+              - pending
+              - deleted
         - in: query
           name: sort
           schema:
             type: string
-            enum: [added, modified, mediaAdded]
+            enum:
+              - added
+              - modified
+              - mediaAdded
             default: added
       responses:
         '200':
@@ -7382,7 +7435,13 @@ paths:
           example: available
           schema:
             type: string
-            enum: [available, partial, processing, pending, unknown, deleted]
+            enum:
+              - available
+              - partial
+              - processing
+              - pending
+              - unknown
+              - deleted
       requestBody:
         content:
           application/json:
@@ -7764,13 +7823,18 @@ paths:
           name: sort
           schema:
             type: string
-            enum: [added, modified]
+            enum:
+              - added
+              - modified
             default: added
         - in: query
           name: filter
           schema:
             type: string
-            enum: [all, open, resolved]
+            enum:
+              - all
+              - open
+              - resolved
             default: open
         - in: query
           name: requestedBy
@@ -7821,7 +7885,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/Issue'
-
   /issue/count:
     get:
       summary: Gets issue counts
@@ -8010,7 +8073,9 @@ paths:
           required: true
           schema:
             type: string
-            enum: [open, resolved]
+            enum:
+              - open
+              - resolved
       responses:
         '200':
           description: Issue status changed
@@ -8049,7 +8114,7 @@ paths:
                 properties:
                   message:
                     type: string
-                    example: 'Unable to retrieve keyword data.'
+                    example: Unable to retrieve keyword data.
   /watchproviders/regions:
     get:
       summary: Get watch provider regions
@@ -8192,7 +8257,7 @@ paths:
         - overriderule
       responses:
         '200':
-          description: 'Values were successfully created'
+          description: Values were successfully created
           content:
             application/json:
               schema:
@@ -8213,7 +8278,7 @@ paths:
             type: number
       responses:
         '200':
-          description: 'Values were successfully updated'
+          description: Values were successfully updated
           content:
             application/json:
               schema:
@@ -8301,7 +8366,43 @@ paths:
           description: User, media or request not found
         '500':
           description: Unable to evaluate override rules
-
+  /auth/oidc:
+    get:
+      summary: Check OIDC configuration
+      tags:
+        - auth
+      responses:
+        '200':
+          description: Status of OIDC configuration
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  enabled:
+                    type: boolean
+  /auth/oidc/login:
+    get:
+      summary: Login via OIDC
+      tags:
+        - auth
+      responses:
+        '302':
+          description: Redirect to Identity Provider
+        '400':
+          description: OIDC not configured
+  /auth/oidc/callback:
+    get:
+      summary: OIDC Callback
+      tags:
+        - auth
+      responses:
+        '302':
+          description: Redirect to application after login
+        '400':
+          description: OIDC callback failed
+        '500':
+          description: Internal server error
 security:
   - cookieAuth: []
   - apiKey: []
