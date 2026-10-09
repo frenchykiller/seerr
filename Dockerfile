@@ -12,7 +12,7 @@ WORKDIR /app
 
 FROM base AS prod-deps
 
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store CI=true pnpm install --prod --frozen-lockfile
+RUN CI=true pnpm install --prod --frozen-lockfile
 
 # Remove large native modules for linux-x64-gnu platform (we use alpine which is musl-based)
 # not supported in pnpm for now due to this bug: https://github.com/pnpm/pnpm/issues/9654
@@ -33,7 +33,7 @@ RUN if [ -d node_modules/.pnpm ]; then \
 FROM base AS build
 
 ARG COMMIT_TAG
-ENV COMMIT_TAG=${COMMIT_TAG}
+ENV COMMIT_TAG=${COMMIT_TAG:-local}
 
 RUN \
   case "${TARGETPLATFORM}" in \
@@ -44,7 +44,7 @@ RUN \
   ;; \
   esac
 
-RUN --mount=type=cache,id=pnpm,target=/pnpm/store CYPRESS_INSTALL_BINARY=0 pnpm install --frozen-lockfile
+RUN CYPRESS_INSTALL_BINARY=0 pnpm install --frozen-lockfile
 
 RUN pnpm build
 
@@ -54,7 +54,7 @@ FROM node:22.23.2-alpine3.23@sha256:46825fbbd4e996a78b7a2cdc08d75e38a5a505bdab95
 ARG SOURCE_DATE_EPOCH
 ARG COMMIT_TAG
 ENV NODE_ENV=production
-ENV COMMIT_TAG=${COMMIT_TAG}
+ENV COMMIT_TAG=${COMMIT_TAG:-local}
 
 RUN apk add --no-cache tzdata
 
