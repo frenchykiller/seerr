@@ -75,11 +75,30 @@ const Login = () => {
     }
   }, [user, router]);
 
+  
+  const { data: oidcData } = useSWR<{ enabled: boolean }>('/api/v1/auth/oidc', {
+    revalidateOnFocus: false,
+  });
+
   const { data: backdrops } = useSWR<string[]>('/api/v1/backdrops', {
     refreshInterval: 0,
     refreshWhenHidden: false,
     revalidateOnFocus: false,
   });
+
+  
+  const oidcLoginButton = oidcData?.enabled ? (
+    <Button
+      key="oidc"
+      data-testid="oidc-login-button"
+      className="flex-1 bg-transparent"
+      onClick={() => {
+        window.location.href = '/api/v1/auth/oidc/login';
+      }}
+    >
+      <span>Login with OIDC</span>
+    </Button>
+  ) : null;
 
   const mediaServerName =
     settings.currentSettings.mediaServerType === MediaServerType.PLEX
@@ -147,6 +166,7 @@ const Login = () => {
           </Button>
         ))
       )),
+    oidcLoginButton,
   ].filter((o): o is JSX.Element => !!o);
 
   return (
