@@ -1108,8 +1108,6 @@ authRoutes.get('/oidc/login', async (req, res) => {
     return res.status(500).send('Session not initialized');
   }
   
-  req.session.oidcState = state;
-  req.session.oidcNonce = nonce;
   // wait, the session type won't have oidcState and oidcNonce, we can just cast it
   // Actually in typescript req.session will complain, we can cast to any
   (req.session as any).oidcState = state;
