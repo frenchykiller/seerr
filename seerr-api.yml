@@ -8381,6 +8381,7 @@ paths:
                 properties:
                   enabled:
                     type: boolean
+      security: []
   /auth/oidc/login:
     get:
       summary: Login via OIDC
@@ -8391,6 +8392,7 @@ paths:
           description: Redirect to Identity Provider
         '400':
           description: OIDC not configured
+      security: []
   /auth/oidc/callback:
     get:
       summary: OIDC Callback
@@ -8403,6 +8405,7 @@ paths:
           description: OIDC callback failed
         '500':
           description: Internal server error
+      security: []
 security:
   - cookieAuth: []
   - apiKey: []
