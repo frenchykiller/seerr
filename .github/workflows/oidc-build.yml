@@ -37,7 +37,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@v5
         with:
-          images: ghcr.io/frenchykiller/jellyseerr
+          images: ghcr.io/${{ github.repository }}
           tags: |
             type=sha
             type=ref,event=branch
